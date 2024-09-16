@@ -1,0 +1,4 @@
+# Resulting binary file, object files and Makefile's dependency files
+a.out
+*.o
+*.d
