@@ -6,7 +6,7 @@
 /*   By: oromashk <oromashk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 20:13:07 by oromashk          #+#    #+#             */
-/*   Updated: 2024/09/18 21:21:38 by oromashk         ###   ########.fr       */
+/*   Updated: 2024/09/19 20:31:07 by oromashk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0')
