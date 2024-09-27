@@ -6,9 +6,11 @@
 /*   By: romashko <romashko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 21:37:22 by romashko          #+#    #+#             */
-/*   Updated: 2024/09/22 21:47:04 by romashko         ###   ########.fr       */
+/*   Updated: 2024/09/27 23:00:48 by romashko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "stdio.h"
 
 int	ft_atoi(const char *nptr)
 {
@@ -36,3 +38,11 @@ int	ft_atoi(const char *nptr)
 	}
 	return (sign * res);
 }
+
+// int	main(void)
+// {
+// 	const char	*str;
+
+// 	str = " 	-2134323";
+// 	printf("%d", ft_atoi(str));
+// }

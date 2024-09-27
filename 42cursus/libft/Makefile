@@ -32,25 +32,30 @@ SRCS = ft_isalpha.c \
 		ft_putchar_fd.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
-		ft_putnbr_fd.c \
-# SRCSB = 
+		ft_putnbr_fd.c
+SRCSB = ft_lstnew.c \
+		ft_lstadd_front.c \
+		ft_lstsize.c \
+		ft_lstlast.c \
+		ft_lstadd_back.c \
+		ft_lstdelone.c \
+		ft_lstclear.c \
+		ft_lstiter.c \
+		ft_lstmap.c
 OBJS = ${SRCS:.c=.o}
-# OBJSB = ${SRCSB:.c=.o}
+OBJSB = ${SRCSB:.c=.o}
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
-SLIB = ar -rcs
+CCFLAGS = -Wall -Wextra -Werror
+AR = ar -rcs
 RM = rm -f
 
-.c.o:
-	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
-
 ${NAME}: ${OBJS}
-	${SLIB} ${NAME} ${OBJS}
+	${AR} ${NAME} ${OBJS}
 
 all: ${NAME}
 
-# bonus: ${NAME} ${OBJSB}
-# 	${SLIB} ${NAME} ${OBJSB}
+bonus: ${NAME} ${OBJSB}
+	${AR} ${NAME} ${OBJSB}
 clean:
 	${RM} ${OBJS} ${OBJSB}
 

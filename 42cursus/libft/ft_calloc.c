@@ -6,7 +6,7 @@
 /*   By: romashko <romashko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 21:48:38 by romashko          #+#    #+#             */
-/*   Updated: 2024/09/22 22:12:32 by romashko         ###   ########.fr       */
+/*   Updated: 2024/09/24 22:27:50 by romashko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_calloc(size_t n, size_t size)
 	void	*arr;
 
 	if (n == 0 || size == 0)
-		arr = (void *)malloc(1);
+		arr = (void *)malloc(0);
 	else
 		arr = (void *)malloc(n * size);
 	if (!arr)
