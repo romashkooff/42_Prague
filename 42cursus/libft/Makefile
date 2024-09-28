@@ -42,25 +42,28 @@ SRCSB = ft_lstnew.c \
 		ft_lstclear.c \
 		ft_lstiter.c \
 		ft_lstmap.c
-OBJS = ${SRCS:.c=.o}
-OBJSB = ${SRCSB:.c=.o}
-CC = cc
+OBJS := ${SRCS:%.c=%.o}
+OBJSB := ${SRCSB:%.c=%.o}
+CC = gcc
 CCFLAGS = -Wall -Wextra -Werror
-AR = ar -rcs
+AR = ar -rcs ${NAME}
 RM = rm -f
-
-${NAME}: ${OBJS}
-	${AR} ${NAME} ${OBJS}
 
 all: ${NAME}
 
+${NAME}: ${OBJS}
+	${AR} ${OBJS}
+
+%.o: %.c
+	${CC} ${CCFLAGS} -c $< -o $@
+
 bonus: ${NAME} ${OBJSB}
-	${AR} ${NAME} ${OBJSB}
+	${AR} ${OBJSB}
 clean:
 	${RM} ${OBJS} ${OBJSB}
 
 fclean: clean
-	${RM} ${NAME} ${bonus} 
+	${RM} ${NAME} 
 
 re: fclean all
 
