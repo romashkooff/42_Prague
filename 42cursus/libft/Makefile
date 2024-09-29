@@ -48,13 +48,14 @@ CC = gcc
 CCFLAGS = -Wall -Wextra -Werror
 AR = ar -rcs ${NAME}
 RM = rm -f
+HEADER = libft.h
 
 all: ${NAME}
 
 ${NAME}: ${OBJS}
 	${AR} ${OBJS}
 
-%.o: %.c
+%.o: %.c ${HEADER}
 	${CC} ${CCFLAGS} -c $< -o $@
 
 bonus: ${NAME} ${OBJSB}
