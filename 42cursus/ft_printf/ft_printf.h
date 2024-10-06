@@ -6,7 +6,7 @@
 /*   By: romashko <romashko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/05 13:43:33 by romashko          #+#    #+#             */
-/*   Updated: 2024/10/06 10:28:53 by romashko         ###   ########.fr       */
+/*   Updated: 2024/10/06 22:17:33 by romashko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdarg.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <limits.h>
 
 int	ft_printf(const char *format, ...);
 int	ft_format(va_list args, const char format);

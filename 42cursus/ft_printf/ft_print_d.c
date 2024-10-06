@@ -6,7 +6,7 @@
 /*   By: romashko <romashko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/05 23:11:58 by romashko          #+#    #+#             */
-/*   Updated: 2024/10/06 12:36:52 by romashko         ###   ########.fr       */
+/*   Updated: 2024/10/06 14:08:56 by romashko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,20 @@
 
 int	ft_print_d(int decimal)
 {
-	int	count;
+	int		count;
+	long	num;
 
+	num = decimal;
 	count = 0;
-	if (decimal < 0)
+	if (num < 0)
 	{
 		count += ft_print_c('-');
-		decimal = -decimal;
+		num = -num;
 	}
-	if (decimal > 9)
+	if (num > 9)
 	{
-		ft_print_d(decimal / 10);
+		count += ft_print_d(num / 10);
 	}
-	count += ft_print_c((decimal % 10) + '0');
+	count += ft_print_c((num % 10) + '0');
 	return (count);
 }
